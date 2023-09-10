@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-column {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.image-column {
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lato";
+}
+
+p {
+  font-family: Times New Roman;
+  font-size: 16px;
+  /* Increase the line-height for more space between lines */
+  line-height: 1.5;
+  /* Adjust this value as needed */
+  padding-left: 40px;
+}
+
+.joshzeng img {
+  max-width: 100%;
+  height: auto;
+}
