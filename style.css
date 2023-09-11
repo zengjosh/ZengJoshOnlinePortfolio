@@ -52,6 +52,37 @@ h1 {
   font-size:48px;
   text-align: left;
 }
+
+.email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CSS to style the email and image */
+#email {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#copyButton {
+  cursor: pointer;
+  width: 24px; /* Adjust the width and height as needed */
+  height: 24px;
+}
+
+#phone {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+}
+
 p {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
