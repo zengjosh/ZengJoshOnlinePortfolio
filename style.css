@@ -21,6 +21,45 @@ nav ul li a{
   
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown links */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style for individual dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for the dropdown links */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown content when hovering over the "Projects" link */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.project-description {
+  padding-left: 80px; 
+  padding-right: 80px; 
+}
+
 .resume {
   padding-left: 50%;
   width: 100%;
