@@ -50,7 +50,6 @@ nav ul li a{
   background-color: #ddd;
 }
 
-/* Show the dropdown content when hovering over the "Projects" link */
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -60,7 +59,7 @@ nav ul li a{
   padding-right: 80px; 
 }
 
-.resume {
+.gdocs {
   padding-left: 50%;
   width: 100%;
   border: none;
@@ -78,6 +77,11 @@ nav ul li a{
 
 .image-column {
   width: 50%;
+}
+
+.imgpreview {
+  max-width: none;
+  max-height: none;
 }
 
 body {
