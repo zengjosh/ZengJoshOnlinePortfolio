@@ -77,16 +77,6 @@ html {
   inline-size: 100%;
 }
 
-body {
-  min-block-size: 100%;
-  min-inline-size: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  display: grid;
-  place-content: center;
-  font-family: system-ui, sans-serif;
-}
-
 @media (orientation: landscape) {
   body {
     grid-auto-flow: column;
@@ -197,7 +187,7 @@ p {
   padding: 0;
 }
 
-.flex { /*Flexbox for containers*/
+.flex { 
   display: flex;
   justify-content: center;
   align-items: center;
