@@ -29,7 +29,7 @@ nav ul li a{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ededed;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -205,7 +205,7 @@ p {
   position:relative;
   text-align:center;
 /*   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%); */
-  background: #f9f9f9;
+  background: #ededed;
   color: black;
   z-index: 1;
 }
