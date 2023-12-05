@@ -170,7 +170,7 @@ p {
   letter-spacing: 1px;
   font-size:17px;
   text-align: left;
-  color: white;
+  color: black;
   padding-left: 40px;
 }
 
@@ -179,7 +179,7 @@ p {
   letter-spacing: 1px;
   font-size:32px;
   text-align: left;
-  color: white;
+  color: black;
   padding-left: 40px;
 }
 
@@ -188,7 +188,7 @@ p {
   letter-spacing: 1px;
   font-size:24px;
   text-align: left;
-  color: white;
+  color: black;
   padding-left: 40px;
 }
 
@@ -204,8 +204,9 @@ p {
 .header {
   position:relative;
   text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
+/*   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%); */
+  background: #f9f9f9;
+  color: black;
   z-index: 1;
 }
 
