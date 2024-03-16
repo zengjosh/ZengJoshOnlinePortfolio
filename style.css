@@ -299,6 +299,11 @@ p {
   }
   h1 {
     font-size:24px;
-  }
-  
+  } 
+}
+
+.year {
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 5px;
 }
