@@ -284,6 +284,11 @@ footer {
   width: 100%; 
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*!
  * Gallery (Modified)
  * Copyright (c) 2024 by Katherine Kato
