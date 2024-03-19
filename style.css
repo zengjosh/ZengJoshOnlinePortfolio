@@ -291,6 +291,10 @@ footer {
   justify-content: space-between;
 }
 
+.video {
+  margin-bottom: 2rem;
+}
+
 /*!
  * Gallery (Modified)
  * Copyright (c) 2024 by Katherine Kato
