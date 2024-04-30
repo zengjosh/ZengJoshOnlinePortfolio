@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Online Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://i.ibb.co/vsvwYfv/your-favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+
+<nav>
+  <ul>
+    <li><a href="index.html" class="nav-link">About Me</a></li>
+    <li><a href="resume.html" class="nav-link">Resume Page</a></li>
+    <li class="dropdown">
+     <a class="nav-link">Java Projects &#9662;</a>
+      <div class="dropdown-content">
+        <a href="chess.html" class="nav-link">Chess Rating v. Number of Moves</a>
+        <a href="snake.html" class="nav-link">Educational Snake Game</a>
+      </div>
+      </li>
+      <li class="dropdown">
+     <a class="nav-link">Python Projects &#9662;</a>
+      <div class="dropdown-content">
+        <a href="122Py.html" class="nav-link">1.2.2 Catch-A-Turtle</a>
+        <a href="123Py.html" class="nav-link">1.2.3 Apple Avalanche</a>
+        <a href="polkadot.html" class="nav-link">Polka Dot Game</a>
+      </div>
+      </li>
+    <li><a href="guestspeakers.html" class="nav-link">Guest Speakers</a></li>
+    <li><a href="contacts.html" class="nav-link">Contacts</a></li>
+  </ul>
+</nav>
+  
+<div class="inner-header flex">
+<h1>Chess Rating v. Number of Moves</h1>
+</div>
+
+ <p class="project-description">
+This project had me analyze chess data from a <a href="https://www.kaggle.com/datasets/datasnaek/chess" target="_blank">dataset</a> found on Kaggle. Taking in the different columns and performing statistical calculations, I was able to create a scatterplot of the information and output information like the coefficient of determination, details of the line of best fit, and the number of data points used in the graph (20058). A <a href="https://docs.google.com/presentation/d/1oQojMJj1GDFc1-mER8uX_naYYebPB2pH4JCPVrZKB-8/edit?usp=sharing" target="_blank">presentation</a> was also created documenting the design process and interpreted the information outputted. A brief conclusion from this project is that the average rating of a chess game will have almost no effect on the number of moves played.
+<br><br>
+To analyze the dataset and visualize the information, the dependencies for the project had to be updated. I used XChart for creating the scatterplot, Apache Commons Math for determining the statistics, and Sinbad for accessing the information from the CSV file.
+<br><br>
+If you want to view the code, here is the <a href="https://github.com/zengjosh/PLTW-3.7.7-DataLabA4/tree/main" target="_blank">Github Repository</a> or <a href="https://replit.com/@JoshZeng/PLTW-377-Activity-4">Replit</a>
+</p>
+  
+<iframe 
+  height="500px" 
+  width="90%" 
+  src="https://replit.com/@JoshZeng/PLTW-377-Activity-4?embed=true&theme=light" 
+  scrolling="no" 
+  frameborder="no" 
+  allowtransparency="true" 
+  allowfullscreen="true" 
+  sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
+
+
+
+  <footer>
+  <div class="container">
+    <div class="column-xs-12">
+      <ul class="social">
+        <li><a href="https://github.com/zengjosh" target="_blank" rel="noopener noreferrer"><span class="fab fa-github"></span></a></li>
+        <li><a href="https://www.linkedin.com/in/josh-zeng-a7107a273/" target="_blank" rel="noopener noreferrer"><span class="fab fa-linkedin"></span></a></li>
+        <li><a href="https://www.hackerrank.com/profile/joshzeng7" target="_blank" rel="noopener noreferrer"><span class="fab fa-hackerrank"></span></a></li>
+      </ul>
+      <p class="copyright">&copy; Copyright 2024 Josh Zeng</p>
+    </div>
+  </div>
+</footer>
