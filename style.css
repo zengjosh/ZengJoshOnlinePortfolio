@@ -222,7 +222,7 @@ p {
 .header {
   position:relative;
   text-align:center;
-  background: #ededed;
+  background: #f5f5f5;
   color: black;
   z-index: 1;
 }
@@ -250,7 +250,7 @@ p {
 
 footer {
   padding: 0.5rem 0;
-  background: #e8e8e8;
+  background: #ededed;
   text-align: center;
   display: flex;
   flex-direction: column;
