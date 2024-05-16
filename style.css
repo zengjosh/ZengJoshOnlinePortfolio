@@ -396,18 +396,19 @@ footer {
       padding-right: 0.5em;
       color: #444; }
 
-.gallery-item1 { 
-  background-image: url("https://i.imgur.com/IhBSpR7.png"); 
+/* styles.css */
+.chess-analysis-container {
+    display: inline-block;
+    overflow: hidden;
 }
 
-.gallery-item2 { 
-  background-image: url("https://i.imgur.com/pX0tcPKl.png"); 
+.chess-image-hover-effect {
+    width: 55%; /* Reducing the size to 25% of the original */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item3 { 
-  background-image: url("https://i.imgur.com/azgTN0I.png"); 
-}
-
-.gallery-item4 { 
-  background-image: url("https://i.imgur.com/r4XaLXj.png"); 
+.chess-image-hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
