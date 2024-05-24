@@ -213,11 +213,7 @@ p {
 .joshzeng img {
   max-width: 100%;
   height: 80%;
-<<<<<<< HEAD
-  padding-left: 60px;
-=======
   padding-left: 40px;
->>>>>>> parent of 9a0e153 (nested dropdown finally working after so many many many long months)
   border-radius: 50%
 }
 
@@ -399,20 +395,3 @@ footer {
       font-size: 1.1rem;
       padding-right: 0.5em;
       color: #444; }
-
-/* styles.css */
-.chess-analysis-container {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.chess-image-hover-effect {
-    width: 55%; /* Reducing the size to 25% of the original */
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.chess-image-hover-effect:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
