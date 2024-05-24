@@ -213,7 +213,11 @@ p {
 .joshzeng img {
   max-width: 100%;
   height: 80%;
+<<<<<<< HEAD
   padding-left: 60px;
+=======
+  padding-left: 40px;
+>>>>>>> parent of 9a0e153 (nested dropdown finally working after so many many many long months)
   border-radius: 50%
 }
 
