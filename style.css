@@ -258,6 +258,7 @@ p {
   margin-left: 5px;
 }
 
+
 footer {
   padding: 0.5rem 0;
   background: #ededed;
@@ -421,4 +422,54 @@ footer {
 .chess-image-hover-effect:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.custom-carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.custom-carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.custom-carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+.custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.custom-carousel-control.prev {
+  left: 10px;
+}
+
+.custom-carousel-control.next {
+  right: 10px;
 }
