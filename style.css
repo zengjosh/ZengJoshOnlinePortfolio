@@ -406,18 +406,18 @@ footer {
       color: #444; }
 
 /* styles.css */
-.chess-analysis-container {
+.project-container {
     display: inline-block;
     overflow: hidden;
 }
 
-.chess-image-hover-effect {
+.hover-effect {
     width: 55%; /* Reducing the size to 25% of the original */
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.chess-image-hover-effect:hover {
+.hover-effect:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -471,4 +471,3 @@ footer {
 .custom-carousel-control.next {
   right: 10px;
 }
-
