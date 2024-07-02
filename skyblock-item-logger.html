@@ -49,9 +49,9 @@
  <p class="project-description">
 Playing Hypixel Skyblock, I often find myself in a deficit of money. Without hours and hours every day, it would be almost impossible to progress in the game. To help address this problem, I created a program to try and log the price history of an item.
 <br><br>
-To grab the current price of an item from the game, I needed an API key from Hypixel's Developer dashboard. To use this key safely I stored it locally as an environmental variable and referenced that variable whenever I needed to make a request for the current buy and sell price for an item called Stack of Stonks. To gather the data at consistent intervals, I created another script to run the previous script (datalog.py) every two minutes with Python's schedule library. After letting the script run for a few hours and getting the needed data, I was able to graph the price against the time of both the buying and selling orders with MatPlotLib.
+To grab the current price of an item from the game, I needed an API key from Hypixel's Developer dashboard. To use this key safely I stored it locally as an environmental variable. I referenced that variable whenever I needed to make a request for the current buy and sell price for an item called Stack of Stonks. To gather the data at consistent intervals, I created another script to run the previous script (datalog.py) every two minutes with Python's schedule library. After letting the script run for a few hours and getting the needed data, I was able to graph the price against the time of both the buying and selling orders with MatPlotLib.
 <br><br>
-To automate the data logging process, I utilized GitHub Actions to run the script every five minutes. This setup required configuring a GitHub API token with the necessary permissions to push updates to the main branch of my repository. Since the key and token could not be stored locally to ensure security, both the Hypixel API key and the GitHub API token were stored as repository secrets. Next, I created a script inside the workflow folder to specify the action's name, schedule, and job, which was to run the datalog.py script every five minutes. 
+I used GitHub Actions to run the script every five minutes to automate the data logging process externally instead of on my machine. This setup required configuring a GitHub API token with the necessary permissions to push updates to the main branch of my repository. Since the key and token could not be stored locally to ensure security, both the Hypixel API key and the GitHub API token were stored as repository secrets. Next, I created a script inside the workflow folder to specify the action's name, schedule, and job, which was to run the datalog.py script every five minutes. 
 <br><br>
 This project introduced me to the basics of using API keys and their functionality, as well as experience with GitHub Actions, and how to implement cron jobs and maintain information security. Overall, this project helped me develop my skills in programming and automation. 
 <br><br>
@@ -59,7 +59,7 @@ The <a href="https://github.com/zengjosh/sbDataLogger" target="_blank">Github</a
 </p>
 <br><br>
   <div class="project-container">
-    <img src="https://i.imgur.com/aaOHAzr.png" alt="stock of stonks graph" class="hover-effect">
+    <img src="https://i.imgur.com/UgYaJe2.png" alt="stock of stonks graph" class="hover-effect">
   </div>
 
 <br><br>
