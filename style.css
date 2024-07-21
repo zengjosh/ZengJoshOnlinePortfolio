@@ -146,6 +146,18 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 570;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: left;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+
 .email-container {
   display: flex;
   justify-content: center;
@@ -405,10 +417,72 @@ footer {
       padding-right: 0.5em;
       color: #444; }
 
-/* styles.css */
+.project-container-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  margin: 20px 40px;
+}
+
+.project-container-left img {
+  margin: 20px 0;
+  width: 50%; /* Adjust this value as needed */
+  max-width: 600px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-container-right {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Make the text container take the remaining space */
+}
+
+.text-container-right p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.project-container-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Center the text vertically */
+  margin: 20px 40px;
+}
+
+.project-container-right img {
+  margin: 20px 0;
+  width: 50%; /* Adjust this value as needed */
+  max-width: 600px; /* Ensure the image doesn't get too large */
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-container-left {
+  margin-right: 20px; /* Adjust the space between text and image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Make the text container take the remaining space */
+}
+
+.text-container-left p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
 .project-container {
-    display: inline-block;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin: 20px 0; /* Optional: Add some margin for spacing */
 }
 
 .hover-effect {
@@ -470,4 +544,68 @@ footer {
 
 .custom-carousel-control.next {
   right: 10px;
+}
+
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+#video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  padding-left: 40px; /* Add some padding to the left */
+  position: relative;
+  z-index: 0;
+  color: white;
+  padding-top: 20vh; /* Adjust this value to position vertically as needed */
+}
+
+.video-header {
+  font-size: 5rem; /* Make the header text large */
+  margin: 0;
+  font-family: Lato, sans-serif;
+}
+
+.video-date {
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem; /* Adjust the size of the date */
+  margin-top: 0px; /* Add some space between the header and the date */
+  padding-left: 20px;
+}
+
+/* Ensure the main content appears below the video */
+.main-content {
+  margin-top: 90vh; /* Adjust this value to ensure content appears below the video */
+}
+
+.header {
+  position: relative;
+  z-index: 5;
+}
+
+.inner-header, .subsubheading, .project-description {
+  position: relative;
+  z-index: 0;
 }
