@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://i.ibb.co/vsvwYfv/your-favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+<script src="load-header.js"></script>
+
+<div id="video-container">
+  <div id="video">
+<iframe src="https://www.youtube.com/embed/ptJFH-Sho1w?si=ozIhnCZa9mbDuUCK&autoplay=1&mute=1&loop=1&playlist=ptJFH-Sho1w&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-caption">Robot finishing the maze!</div>
+</div>
+
+<div class="video-text-container">
+  <h1 class="video-header">Week 2</h1>
+  <span class="video-date">7.15.24 - 7.21.24</span>
+</div>
+
+<div class="main-content">
+  <h2>Objective</h2>
+
+  <p class="project-description">
+In the second week, I was paired with someone new, Amelie. Our task for the week was to create a robot that can navigate a maze solely on an RPi Camera and Post-It notes to guide it. The parts remained the same except for the addition of the camera. 
+  </p>
+  
+  <h2>Design Process</h2>
+
+  <p class="project-description">
+Our week started with a lecture on computer vision, which included the different image types, how we could process an image to keep only the important details, and the libraries that we would be using. 
+<br><br>
+Upon arriving at the lab, I started on the software while Amelie worked on the wiring. I added a proportional control feature to have the robot always center on the Post-It and created a function that would be used to process every frame the robot takes so that in most circumstances, only the Post-Its would show up in the final binary image. 
+<br><br>
+When brainstorming, we first agreed that having our robot recognize the arrows would be the easiest way to approach the problem. To do this, we decided to try transfer learning by feeding MobileNet, an existing network, images of labeled arrows that were pointing either up, down, left, or right. Though the model performed well, with its accuracy hovering around 87%, it wasn't able to be transferred to the Raspberry Pi, as all the libraries that supported it weren't able to be installed. 
+<br><br>
+Up to this point, I had done almost all the software so we switched roles. I would start on the documentation while Amelie worked on a new method to get the robot through the maze. Our second idea was to move based on color, so she started finding the HSV values for masking. 
+<br><br>
+On the day of the competition, Friday, none of the code was working and our robot was unable to move. I was too focused on trying to get the necessary libraries installed for the neural network and the color masking was also nowhere near complete. We had no idea where to start and were mere hours away from showing off the work we had done for the week. 
+<br><br>
+On the verge of giving up, we were saved by our co-instructor, Jonathan! He somehow deciphered through the walls of code, got the masking to work, and took the project to a more simplified approach. Instead of masking two colors, we would only mask one, and instead of figuring out which direction to turn based on the color, we would follow a singular line of pink. Minutes before our turn to run the maze, our robot was miraculously able to follow the notes.  
+<br><br>
+  </p>
+  
+  <div class="project-container">
+    <img src="https://i.imgur.com/Wa3b3jl.png" alt="maze robot image" class="hover-effect">
+  </div>
+
+  
+  <h2>Summary</h2>
+  <p class="project-description">
+
+This week I learned the important lesson of focusing on the essential parts of a project first before moving on to the unnecessary parts. It also reminded me of the importance of creating a timeline and planning through the entire project before starting, especially if there is a short time limit placed on me. For technical knowledge, I was introduced to using a camera to guide a robot and processing images to remove unimportant information. Attached is also the documentation for a more in-depth design process. 
+
+  </p>
+  
+  <div class="container">
+    <div class="text-column">
+        <div class="iframe-container">
+            <iframe class="gdocs" src="https://docs.google.com/document/d/e/2PACX-1vQk_SZa8iUnDmjZ3ncZMcQ1FANWIE3u6d0xIByrtjz9wLz1uwz6MdMedteq7DCfh08GmZ4m_ChbnPdp/pub?embedded=true" width="100%" height="600" style="border: none;"></iframe>
+        </div>
+    </div>
+</div>
+  <footer>
+    <div class="container">
+      <div class="column-xs-12">
+        <ul class="social">
+          <li><a href="https://github.com/zengjosh" target="_blank" rel="noopener noreferrer"><span class="fab fa-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/josh-zeng-a7107a273/" target="_blank" rel="noopener noreferrer"><span class="fab fa-linkedin"></span></a></li>
+          <li><a href="https://www.hackerrank.com/profile/joshzeng7" target="_blank" rel="noopener noreferrer"><span class="fab fa-hackerrank"></span></a></li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2024 Josh Zeng</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const videoContainer = document.getElementById('video-container');
+    const scrolled = window.scrollY;
+    videoContainer.style.transform = 'translateY(' + scrolled * -0.75 + 'px)';
+  });
+</script>
+
+</body>
+</html>
