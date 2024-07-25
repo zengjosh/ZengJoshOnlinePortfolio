@@ -6,7 +6,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-  z-index: 100;
 }
 
 nav ul li {
@@ -621,6 +620,3 @@ footer {
   font-size: 12px; /* Font size */
 }
 
-#header {
-  z-index: 100;
-}
