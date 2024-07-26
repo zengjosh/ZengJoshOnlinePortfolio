@@ -625,3 +625,9 @@ footer {
   padding: 5px; /* Padding around the text */
   font-size: 12px; /* Font size */
 }
+
+.slides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
