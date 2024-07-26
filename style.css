@@ -315,8 +315,14 @@ footer {
   justify-content: space-between;
 }
 
-.video {
+.content-video-container {
+  display: grid;
+  place-items: center;
   margin-bottom: 2rem;
+}
+
+.video {
+  max-width: 100%; 
 }
 
 .project-gallery {
@@ -619,4 +625,3 @@ footer {
   padding: 5px; /* Padding around the text */
   font-size: 12px; /* Font size */
 }
-
