@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://i.ibb.co/vsvwYfv/your-favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+<script src="load-header.js"></script>
+
+<div id="video-container">
+  <div id="video">
+    <iframe src="https://www.youtube.com/embed/GQFVGmlrqjU?si=CLGLWj9erVUGIQsX&autoplay=1&mute=1&loop=1&playlist=GQFVGmlrqjU&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-caption">Robot refusing to move :(</div>
+</div>
+
+<div class="video-text-container">
+  <h1 class="video-header">Week 3</h1>
+  <span class="video-date">7.22.24 - 7.25.24</span>
+</div>
+
+<div class="main-content">
+  <h2>Objective</h2>
+
+  <p class="project-description">
+For the third week, I partnered with Marina and our goal was to create a robot that could move with a maximum of four 180-degree servos. The goal was to have the robot complete a ten-foot track in the shortest amount of time. 
+  </p>
+  
+  <h2>Design Process</h2>
+
+  <p class="project-description">
+We began by brainstorming possible designs the robot could take on, and after about thirty minutes decided on a three-legged robot. The idea was to have two legs with one servo each and the third leg with a joint in the middle requiring two servos. The body would be made of styrofoam and would hold the breadboard, PWM drivers, Raspberry Pi, batteries, and servos, and the legs would be made of acrylic and laser cut. 
+    <br><br>
+  </p>
+  <div class="project-container">
+    <img src="https://i.imgur.com/SEEgwfb.jpeg" alt="legged robot brainstorm image" class="hover-effect" style="max-width: 40%;">
+    <p>Legged robot brainstorm</p>
+  </div>
+
+  <p class="project-description">
+On the very first day, we faced servo problems. There would always be at least one stubborn servo refusing to move, and after the majority of our lab time, we got all four servos working, The next day, upon arrival, the servos stopped working again, and after more hours of debugging, new servos, and a new Raspberry Pi, everything seemed to work again. However, the next day of lab again saw the servos stop working. Basically, throughout this entire project, it was very rare to see all four servos working. 
+<br><br>
+Focusing on the development process excluding servos, we first tried using a game controller to move the robot around but later switched to fully hard-coded movement. Marina was able to make rough cardboard prototypes and I was able to CAD everything in Onshape and get it laser-cut. 
+<br><br>
+  </p>
+  <div class="project-container">
+    <img src="https://i.imgur.com/4c8mzLh.jpeg" alt="legged robot brainstorm image" class="hover-effect" style="max-width: 40%;">
+    <p>Cardboard prototypes</p>
+  </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/eX89X3L.png" alt="cad" class="hover-effect" style="max-width: 40%;">
+    <p>CAD of legs</p>
+  </div>
+      <div class="project-container">
+    <img src="https://i.imgur.com/hR5DTV6.jpeg" alt="acrylic laser cut" class="hover-effect" style="max-width: 40%;">
+    <p>Laser-cut acrylic</p>
+  </div>
+    <p class="project-description">
+On the day of the competition, Thursday this time, we had just begun assembling the robot, and after spending hours doing modifications and positioning the different parts, started our first trial, which completely failed. Though we tried many many modifications to both the hardware and software, we were unfortunately unable to get the robot to move forward. 
+<br><br>
+  </p>
+  
+  <div class="project-container">
+    <img src="https://i.imgur.com/eHYnRRe.jpeg" alt="maze robot image" class="hover-effect">
+    <p>Robot that isn't moving</p>
+  </div>
+
+  
+  <h2>Summary</h2>
+  <p class="project-description">
+
+In retrospect, it's easy to determine the flaws in our development process over the week. We glossed over brainstorming and ended up constructing a robot that we knew might not move. We also planned an extremely complex robot rather than taking a more simplistic approach, which was over-ambitious as we both had never taken a physics course, meaning that for any of the movement problems that occurred, we were completely lost. On the day of the competition, we actually had a working iteration, but rather than testing it, we kept trying to smooth out the finer details, and once the time was up, the robot stopped being able to move. 
+<br><br>
+Though there were many missteps, this week also remains a valuable learning experience. It exposed me to CAD, laser-cutting, and a tiny bit of physics. It has also shown me my limits, the importance of having a coherent plan before development, and, like last week, the importance of time management. 
+  </p>
+
+  <h2>Tapeball</h2>
+    <div class="project-container">
+    <img src="https://i.imgur.com/exZlDVL.jpeg" alt="cope for bad robot" class="hover-effect">
+    <p>"Our robot may not have walked but at least we have a tapeball"
+      <br>
+        -Marina
+      </p>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="column-xs-12">
+        <ul class="social">
+          <li><a href="https://github.com/zengjosh" target="_blank" rel="noopener noreferrer"><span class="fab fa-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/josh-zeng-a7107a273/" target="_blank" rel="noopener noreferrer"><span class="fab fa-linkedin"></span></a></li>
+          <li><a href="https://www.hackerrank.com/profile/joshzeng7" target="_blank" rel="noopener noreferrer"><span class="fab fa-hackerrank"></span></a></li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2024 Josh Zeng</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const videoContainer = document.getElementById('video-container');
+    const scrolled = window.scrollY;
+    videoContainer.style.transform = 'translateY(' + scrolled * -0.75 + 'px)';
+  });
+</script>
+
+</body>
+</html>
