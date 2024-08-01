@@ -483,12 +483,13 @@ footer {
 
 .project-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
   text-align: center;
-  margin: 20px 0; /* Optional: Add some margin for spacing */
+  margin: 20px 0; 
 }
 
 .hover-effect {
@@ -630,4 +631,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image-caption {
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #555;
 }
