@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://i.ibb.co/vsvwYfv/your-favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+<script src="load-header.js"></script>
+
+<div id="video-container">
+  <div id="video">
+<iframe src="https://www.youtube.com/embed/axT0GRV12RU?si=e9hSxRMOpBvBV79c&autoplay=1&mute=1&loop=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+  </div>
+  <div class="video-caption">Robot picking up object!!!</div>
+</div>
+
+<div class="video-text-container">
+  <h1 class="video-header">Week 4</h1>
+  <span class="video-date">7.26.24 - 7.21.24</span>
+</div>
+
+<div class="main-content">
+  <h2>Objective</h2>
+
+  <p class="project-description">
+For our final week, I partnered with Anthony, and the task this week was to create anything we wanted. 
+  </p>
+  
+  <h2>Design Process</h2>
+
+  <p class="project-description">
+Our initial idea was to create a robot arm that could manipulate objects, and if we had time, we would make it sort objects autonomously. However, after pitching our ideas, we shifted toward a gantry design, to increase the stability of the bot and make it easier to grab items. To pick up items, we decided on a set of rails to move the bot around and a claw mechanism connected to a rack and pinion. 
+    <br><br>
+  </p>
+  <div class="project-container">
+    <img src="https://i.imgur.com/orb5vl5.png" class="hover-effect" style="max-width: 40%;">
+    <p>Inital arm design</p>
+  </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/pzTmPpu.png" class="hover-effect" style="max-width: 40%;">
+    <p>Gantry design</p>
+  </div>
+  <p class="project-description">
+During our final project, Anthony and I both chose the tasks we were weaker in. I got to do most of the hardware while he was on the software. Over the week, he was able to program the controller to do all the different functions of the gantry. 
+    <br><br>
+While Anthony was working on the controller, I got most of the hardware done. To ensure the bot could move along the rails, we took measurements of the motor connection and the thickness of the cardboard using a caliper. I was then able to CAD the wheels into two parts, to avoid using support material, and then 3D print them using Makerbot Method printers. 
+<br><br>
+  </p>
+  <div class="project-container">
+    <img src="https://i.imgur.com/IfRD1hs.png" alt="motor measurement" class="hover-effect" style="max-width: 40%;">
+    <p>Motor measurement</p>
+  </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/K2zKOlZ.png" alt="cad" class="hover-effect" style="max-width: 40%;">
+    <p>CAD of wheels</p>
+  </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/YPPxfCG.png" alt="cad" class="hover-effect" style="max-width: 40%;">
+    <p>Method Printer printing wheels</p>
+  </div>
+    <p class="project-description">
+Once the wheels were able to move along the cardboard rails, we wanted to mount a platform on top to have a place to store the rack and pinion. Since the motor already had screw holes for mounting other attachments, we took the diameter and created another CAD model to 3D print so we could have a cardboard sheet on top of the motors. 
+<br><br>
+  </p>
+        </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/agjqQF0.png" alt="cad" class="hover-effect" style="max-width: 40%;">
+    <p>CAD of motor attachment</p>
+  </div>
+
+ <p class="project-description">
+ The gripping mechanism had another two racks and pinions to open and close the claws. The CAD file was found online and after 3D printing, we attached a servo to grab items. 
+<br><br>
+After creating the platform and attaching the rack and pinion, the entire mechanism was a lot more unstable than expected, as there was only one point of contact and a lot of weight was placed on the rack. To help, we used rubber bands to somewhat fix the rack into place. 
+<br><br>
+  </p>
+        </div>
+  <div class="project-container">
+    <img src="https://i.imgur.com/m39Na0A.jpeg" alt="cad" class="hover-effect" style="max-width: 40%;">
+    <p>Final design</p>
+  </div>
+  
+  <h2>Summary</h2>
+  <p class="project-description">
+
+Overall, I'm happy that Anthony and I were able to create a working gantry. Though we never got to move left or right or incorporate a Picamera into the build, this project still pushed me and I ended this week with much more hardware knowledge than when I started. 
+
+  </p>
+
+  <footer>
+    <div class="container">
+      <div class="column-xs-12">
+        <ul class="social">
+          <li><a href="https://github.com/zengjosh" target="_blank" rel="noopener noreferrer"><span class="fab fa-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/josh-zeng-a7107a273/" target="_blank" rel="noopener noreferrer"><span class="fab fa-linkedin"></span></a></li>
+          <li><a href="https://www.hackerrank.com/profile/joshzeng7" target="_blank" rel="noopener noreferrer"><span class="fab fa-hackerrank"></span></a></li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2024 Josh Zeng</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const videoContainer = document.getElementById('video-container');
+    const scrolled = window.scrollY;
+    videoContainer.style.transform = 'translateY(' + scrolled * -0.80 + 'px)';
+  });
+</script>
+
+</body>
+</html>
