@@ -1,11 +1,122 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
+#hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
 nav {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  /* Show hamburger icon */
+  #hamburger {
+    display: block;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Hide nav menu initially */
+  nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    z-index: 1000;
+    transform: translateX(-250px); /* Hide off-screen */
+    transition: transform 0.3s ease;
+  }
+
+  /* Show nav menu when open */
+  nav.open {
+    transform: translateX(0);
+  }
+
+  /* Adjust nav styles for mobile */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown .dropdown-content,
+  .dropdown-submenu .dropdown-content {
+    display: none !important;
+    position: static !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .dropdown.active > .dropdown-content,
+  .dropdown-submenu.active > .dropdown-content {
+    display: block !important;
+    margin-left: 10px !important;
+  }
+
+  /* Indentation for nested submenu items */
+  .dropdown .dropdown-content a {
+    padding-left: 20px !important; /* Indent first-level submenu items */
+  }
+
+  .dropdown-submenu .dropdown-content a {
+    padding-left: 40px !important; /* Further indent for nested items */
+  }
+
+  /* Spacing to prevent overlap */
+  .dropdown-content {
+    margin-top: 5px !important;
+  }
+
+  /* Ensure no overflow clipping occurs */
+  .dropdown-content, .dropdown-submenu .dropdown-content {
+    overflow: visible !important;
+  }
+}
+
+
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  /* Hide hamburger icon */
+  #hamburger {
+    display: none;
+  }
+
+  /* Ensure nav displays as usual */
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
 }
 
 nav ul li {
