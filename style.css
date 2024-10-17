@@ -124,7 +124,7 @@ nav {
   }
 
   .joshzeng img {
-    width: 60% !important; /* Increase the image size to make it more visible */
+    width: 100% !important; /* Increase the image size to make it more visible */
     height: auto !important; /* Maintain aspect ratio */
     margin: 0 auto; /* Center image horizontally */
     display: block; /* Ensure the image takes the correct width */
