@@ -115,6 +115,23 @@ nav {
     display: block !important; /* Make sure iframe behaves as a block element */
     box-sizing: border-box !important; /* Include padding and border in width calculation */
   }
+
+  .joshzeng {
+    width: 100% !important; /* Ensure full width for the image container */
+    margin: 0 auto 1rem auto !important; /* Center the image and add margin at the bottom */
+    text-align: center !important; /* Center-align the image */
+    display: block; /* Make sure it is displayed as a block element */
+  }
+
+  .joshzeng img {
+    width: 50% !important; /* Limit the image size to make it look balanced */
+    height: auto !important; /* Maintain aspect ratio to avoid distortion */
+    display: inline-block; /* Allow the image to be centered using text-align */
+  }
+
+  .text-column {
+    width: 90% !important; /* Ensure text takes up most of the screen width */
+  }
 }
 
 
