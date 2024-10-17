@@ -124,16 +124,22 @@ nav {
   }
 
   .joshzeng img {
-    width: 50% !important; /* Adjust to desired image size */
+    width: 60% !important; /* Increase the image size to make it more visible */
     height: auto !important; /* Maintain aspect ratio */
     margin: 0 auto; /* Center image horizontally */
-    display: block; /* Force the image to be a block element to take full width */
+    display: block; /* Ensure the image takes the correct width */
   }
 
   .text-column {
-    width: 100% !important; /* Take full width for the text container */
+    width: 100% !important; /* Full width for the text container */
     margin: 0 auto !important; /* Center align the text container */
     text-align: center !important; /* Center-align the text itself */
+  }
+
+  /* Override paragraph left padding for mobile */
+  p {
+    padding-left: 4% !important; /* Remove default left padding */
+    padding-right: 4% !important; /* Remove default right padding */
   }
 
   /* Forcing the parent container to behave as a column layout */
