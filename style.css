@@ -13,6 +13,8 @@ nav {
   padding: 10px;
 }
 
+
+
 @media (max-width: 767px) {
   /* Show hamburger icon */
   #hamburger {
@@ -25,21 +27,18 @@ nav {
     padding: 10px;
   }
 
-  /* Hide nav menu initially */
   nav {
-    display: block;
-    position: fixed;
+    position: fixed;  /* Ensure nav stays fixed when open */
     top: 0;
     left: 0;
     width: 250px;
     height: 100%;
-    background-color: #f9f9f9;
-    overflow-y: auto;
-    z-index: 1000;
-    transform: translateX(-250px); /* Hide off-screen */
+    background-color: #f9f9f9;  /* Match the page background */
+    z-index: 1000;  /* Make sure the nav appears above most elements */
+    overflow-y: auto;  /* Allow scrolling if content is longer than the screen */
+    transform: translateX(-100%); /* Hide off-screen initially */
     transition: transform 0.3s ease;
   }
-
   /* Show nav menu when open */
   nav.open {
     transform: translateX(0);
@@ -98,6 +97,8 @@ nav {
   .dropdown-content, .dropdown-submenu .dropdown-content {
     overflow: visible !important;
   }
+
+  
 }
 
 
