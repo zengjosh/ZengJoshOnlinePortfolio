@@ -98,7 +98,23 @@ nav {
     overflow: visible !important;
   }
 
-  
+  .text-column, .iframe-container {
+    padding: 0 !important; /* Remove all padding */
+    margin: 0 !important; /* Remove all margins */
+    width: 100% !important; /* Set full width for all parent containers */
+    max-width: 100% !important; /* Ensure no maximum width constraint */
+  }
+
+  /* Mobile-specific styling for iframe within .gdocs */
+  .gdocs {
+    padding: 0 !important; /* Remove all padding */
+    margin: 0 !important; /* Remove all margin */
+    width: 100vw !important; /* Set the iframe width to the viewport width */
+    max-width: 100% !important; /* Ensure it does not shrink */
+    height: 85vh !important; /* Set a height that fills a significant portion of the screen */
+    display: block !important; /* Make sure iframe behaves as a block element */
+    box-sizing: border-box !important; /* Include padding and border in width calculation */
+  }
 }
 
 
