@@ -148,6 +148,33 @@ nav {
     flex-direction: column !important; /* Stack vertically */
     align-items: center !important; /* Center elements horizontally */
   }
+
+  #video-container {
+    display: none !important; /* Ensure the video is hidden */
+  }
+
+  .video-thumbnail {
+    display: block !important;
+    width: 100vw !important;
+    height: 60vh !important; /* Adjust as needed */
+    background: url('https://img.youtube.com/vi/4-0PTO69_aI/maxresdefault.jpg') no-repeat center center !important;
+    background-size: cover !important;
+    margin: 0 auto !important; /* Center if possible */
+    position: relative !important;
+    z-index: -1 !important;
+    border: 2px solid red !important; /* Temporary border for debugging */
+  }
+
+  .video-text-container {
+    position: relative !important; 
+    padding: 20px !important; 
+    text-align: center !important; 
+    color: white !important; 
+    z-index: 0 !important; 
+    width: 90vw !important; 
+    margin: 0 auto !important; 
+  }
+
 }
 
 
