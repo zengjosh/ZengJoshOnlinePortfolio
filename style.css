@@ -306,6 +306,10 @@ html {
   border: none;
   margin-bottom: 2rem;
 }
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 .text-column {
   width: 50%;
