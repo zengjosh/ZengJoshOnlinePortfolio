@@ -466,8 +466,7 @@ p {
 }
 
 
-footer {
-  /* Existing footer styles */
+.footer {
   background: #ededed;
   text-align: center;
   display: flex;
@@ -476,7 +475,6 @@ footer {
   justify-content: center;
   width: 100%;
   
-  /* Prevent footer from shrinking */
   flex-shrink: 0;
 }
 
