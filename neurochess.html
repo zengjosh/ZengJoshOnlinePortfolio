@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-
   <meta charset="UTF-8">
   <title>Online Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +12,60 @@
 
 <div id="header"></div>
 <script src="load-header.js"></script>
-
   
 <div class="inner-header flex">
-<h1>Neurochess</h1>
+<h1>Neurochess <span class="year"> 2024-2025</span></h1>
 </div>
 
-<div class="container">
-  <div class="text-column">
-    <p>
-     Neurochess was a project I worked on with a team of four other students. 
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    </p>
-  </div>
-    <div class="joshzeng">
-    <a href="https://i.imgur.com/w0iKHeP.jpeg"><img src="https://i.imgur.com/w0iKHeP.jpeg" alt="joshzeng picture" border="0"></a>
-  </div>
+<p class="project-description">
+<a href="https://neurochess.online/" target="_blank">Neurochess</a> is a web app I helped develop with a team of three of my friends, originally designed to support individuals with ADHD. Over time, we expanded it to benefit a broader audience by combining chess education with interactive analysis and cognitive feedback. The platform features educational chess videos created by one of our teammates, a Chess International Arena Grandmaster, and Neural AI that provides feedback based on moves and analysis using Stockfish, an open-source chess engine.
+   
+<br><br>
+   
+The educational chess videos were posted on YouTube and Loom, and embedded onto our website for easier accessibility. I used TypeScript interfaces to store unique video information like title, category, and platform, allowing users to sort videos by chess openings, middlegames, or endgames.
+   
+<br><br>
+
+To ensure a smoother user experience across devices, I implemented a responsive design through Tailwind CSS. The layout dynamically adapts to screen size: on wider screens, it displays a traditional horizontal navigation bar, while on smaller devices, it switches to a compact mobile interface with a “Menu” button that reveals a dropdown list of navigation links. This was done by conditionally rendering elements based on the viewport width. The result was a more friendly site that preserved full functionality and accessibility regardless of device.
+
+<br><br>
+
+The Neural AI page takes in a chess PGN, a text-based format for storing chess games. I created a parser function to clean and extract metadata including player names, ELO ratings, date, time control, and the game result. Missing fields were handled by defaulting to "N/A" on the site. I then used npm’s react-chessboard component to visualize games, allowing users to flip the board and cycle through moves interactively.
+ 
+<br><br>
+
+Initially, I implemented stockfish.wasm on the client side to keep the app entirely free to run. However, because it ran entirely in-browser, performance was poor; it could take up to a minute to return a single evaluation. To improve this, I replaced it with a POST request to chess-api.com, which returned evaluations instantly while remaining free under our usage level. This significantly improved user experience without adding hosting costs.
+   
+<br><br>
+   
+From the PGN file and Stockfish analysis, we generated neural insights (still under development), or predictions, to give users feedback in four categories: 
+</p>
+<ul class="bulletpoints">
+  <li>Pattern Recognition- based on how closely user openings matched known opening lines from a JSON file</li>
+  <li>Problem-Solving- based on the changes in Stockfish's rating</li>
+  <li>Strategic Planning- determined by unique pieces used</li>
+  <li>Working Memory- based on the depth of the game or the total number of moves</li>
+</ul>
+
+<p class="project-description">
+
+All four were calculated using algorithmic thresholds and heuristics with no machine learning being involved. 
+
+<br><br>
+
+To provide feedback on specific moves, we integrated Google Gemini. Since Gemini's free tier had rate limits, I designed a compact prompt that included the FEN position, the move played, the initial and final Stockfish evaluations, and the change in evaluation. This allowed Gemini to classify the move as good, bad, or neutral and explain its strategic or tactical value in just 1–2 sentences. To maintain responsiveness, I added skeleton-loading UI elements while waiting for API responses.
+
+<br><br>
+
+We used GitHub for version control and hosted the app on Vercel. API keys for both chess-api and Gemini were stored securely as environment variables to protect sensitive information. Thanks to efficient API usage and relatively low traffic, the entire project remained within the free tier of all tools used.
+</p>
+<br><br>
+<div class="content-video-container">
+  <iframe class="video" width="1280" height="720" src="https://www.youtube.com/embed/v3VX4yZRSHA?si=ePxWXgFYLfPAFuqu" frameborder="0" allowfullscreen></iframe>
 </div>
+<br><br>
+
+
 <div id="footer"></div>
 <script src="load-footer.js"></script>
 </body>
